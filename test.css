@@ -1,8 +1,15 @@
-#pika {
-    width: 100px;
-    height: 150px;
+
+.rowStyle{
+    width: 190px;
+    height: 250px;
 }
 
-.inlineBlock{
+.blockStyle{
+    /*float :left;*/
     display: inline-block;
+    margin-right: 30px;
+}
+ 
+.textStyle {
+    text-align: center;
 }
