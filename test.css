@@ -1,0 +1,12 @@
+#pika {
+    width: 100px;
+    height: 150px;
+}
+
+.block-inline{
+    display: inline-block;
+}
+
+.classNameTest{
+    display: inline-block;
+}
