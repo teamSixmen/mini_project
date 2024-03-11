@@ -4,59 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST PROJECT</title>
-    <link rel="stylesheet" href="test.css"></link>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="test.css"></link>
 </head>
 <body>
-    <div id="root">
-        <h1>Master Test</h1>
-    </div>
+    <div id="root"></div>
     <script type="text/babel">
-
         const menu = {
             name : '불고기버거',
             price : '2000'
         }
-        // const style = {
-        //     display : inline-block
-        // }
-            // const test = classNameTest;
+        const inlineBlock = 'inlineBlock';
 
         const element = (
             <>
-                <div >
-                    <div>
-                        <table border='1'>
-                            <caption>주메뉴</caption>
-                            <img id="pika" src="test_pika.png"></img>
-                            <th>
-                                <td>이름</td>
-                                <td>가격</td>
-                            </th>
-                            <tr>
-                                <td>{menu.name}</td>    
-                                <td>{menu.price}</td>    
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <table border='1'>
-                            <img id="pika" src="test_pika.png"></img>
-                            <th>
-                                <td>이름</td>
-                                <td>가격</td>
-                            </th>
-                            <tr>
-                                <td>{menu.name = '새우버거'}</td>    
-                                <td>{menu.price = '2200'}</td>    
-                            </tr>
-                        </table>
-                    </div>
+                <div className={inlineBlock}>
+                    <img id="pika" src="test_pika.png"></img>
+                    <img id="pika" src="test_pika.png"></img>
                 </div>
             </>
-            );
+        );
 
         ReactDOM.createRoot(document.getElementById('root')).render(element);
     </script>
