@@ -8,10 +8,35 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="test.css"></link>
+    <style>
+        .head {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .textStyle {
+            cursor: pointer;
+        }
+
+        .body {
+            text-align: center;
+        }
+        
+        .foot {
+            text-align: center;
+        }
+
+
+    </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root" class="head"></div>
+    <div id="root1" class="body"></div>
+    <div id="root2" class="foot"></div>
     <script type="text/babel">
+
+       
         const pokemon = {
             name : 'pikachu',
             power : 9999
@@ -21,34 +46,40 @@
         const blockStyle = 'blockStyle';
         const textStyle = 'textStyle';
 
-        const onClickHandler = () => {
-            alert('Name : ' + pokemon.name + '\nPower : ' + pokemon.power);
-        }
+        // const element = (
+            // <div className={blockStyle}>
+            //     <img className={rowStyle} src="test_pika.png"></img>
+            //     <pre className={textStyle}>Name : {pokemon.name}</pre>
+            //     <pre className={textStyle}>Power : {pokemon.power}</pre>
+            // </div>
+            // <div className={blockStyle}>
+            //     <img className={rowStyle} src="test_pika.png"></img>
+            //     <pre className={textStyle}>Name : {pokemon.name = 'pikacho'}</pre>
+            //     <pre className={textStyle}>Power : {pokemon.power = 999}</pre>
+            // </div>
+            // <div className={blockStyle}>
+            //     <img className={rowStyle} src="test_pika.png"></img>
+            //     <pre className={textStyle}>Name : {pokemon.name = 'pakachu'}</pre>
+            //     <pre className={textStyle}>Power : {pokemon.power = 6666}</pre>
+            // </div>
+        // );
 
         const element = (
-            <div>
-                <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png" onClick={onClickHandler}></img>
-                    <pre className={textStyle}>Name : {pokemon.name}</pre>
-                    <pre className={textStyle}>Power : {pokemon.power}</pre>
-                </div>
-                <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png"></img>
-                    <pre className={textStyle}>Name : {pokemon.name = 'pikacho'}</pre>
-                    <pre className={textStyle}>Power : {pokemon.power = 999}</pre>
-                </div>
-                <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png"></img>
-                    <pre className={textStyle}>Name : {pokemon.name = 'pakachu'}</pre>
-                    <pre className={textStyle}>Power : {pokemon.power = 6666}</pre>
-                </div>
-            </div>
+
+            <>
+                <span className={textStyle}> 주 메뉴 |</span>
+                <span className={textStyle}> 사이드 메뉴 | </span>
+                <span className={textStyle}> 음료 | </span>
+                <span className={textStyle}> 치킼ㄴ? | </span>
+                <span className={textStyle}> 기타</span>
+            </>
+
         );
 
         const element2 = (
-            <div>
+            <>
                 <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png" onClick={onClickHandler}></img>
+                    <img className={rowStyle} src="test_pika.png"></img>
                     <pre className={textStyle}>Name : {pokemon.name}</pre>
                     <pre className={textStyle}>Power : {pokemon.power}</pre>
                 </div>
@@ -62,30 +93,12 @@
                     <pre className={textStyle}>Name : {pokemon.name = 'pakachu'}</pre>
                     <pre className={textStyle}>Power : {pokemon.power = 6666}</pre>
                 </div>
-            </div>
+            </>
         );
-
-        const element3 = (
-            <div>
-                <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png" onClick={onClickHandler}></img>
-                    <pre className={textStyle}>Name : {pokemon.name}</pre>
-                    <pre className={textStyle}>Power : {pokemon.power}</pre>
-                </div>
-                <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png"></img>
-                    <pre className={textStyle}>Name : {pokemon.name = 'pikacho'}</pre>
-                    <pre className={textStyle}>Power : {pokemon.power = 999}</pre>
-                </div>
-                <div className={blockStyle}>
-                    <img className={rowStyle} src="test_pika.png"></img>
-                    <pre className={textStyle}>Name : {pokemon.name = 'pakachu'}</pre>
-                    <pre className={textStyle}>Power : {pokemon.power = 6666}</pre>
-                </div>
-            </div>
-        );
-
-        ReactDOM.createRoot(document.getElementById('root')).render([element,element2,element3]);
+     
+        ReactDOM.createRoot(document.getElementById('root')).render(element);
+        ReactDOM.createRoot(document.getElementById('root1')).render(element2);
+        ReactDOM.createRoot(document.getElementById('root2')).render(element2);
     </script>
 </body>
 </html>
